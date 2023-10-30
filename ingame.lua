@@ -1,3 +1,5 @@
+if game.PlaceId ~= 6839171747 then return end
+
 game:GetService("Workspace").CurrentRooms.DescendantAdded:Connect(function(L_80_arg1)
 	if not _G.IncreasedDistance then
 		return
@@ -471,8 +473,8 @@ L_21_.MouseButton1Down:connect(function()
 		end
 	end
 end);
-L_1_:Notify("Welcome to BlackKing | Welcome : "..game.Players.LocalPlayer.DisplayName );
-L_1_:Notify("Thx For Use :D");
+L_1_:Notify("Welcome to Funni Doors | Welcome : "..game.Players.LocalPlayer.DisplayName.."(@"..game.Players.LocalPlayer.Name..")" );
+L_1_:Notify("Thanks for using!");
 local L_22_ = Instance.new("Sound");
 L_22_.Parent = game.SoundService;
 L_22_.SoundId = "rbxassetid://4590657391";
@@ -480,7 +482,7 @@ L_22_.Volume = 5 + 0 ;
 L_22_.PlayOnRemove = true;
 L_22_:Destroy();
 local L_23_ = L_1_:CreateWindow({
-	Title = "BlackKing X BobHub DOORS | Welcome : "..game.Players.LocalPlayer.DisplayName,
+	Title = "Funni Doors | Welcome : "..game.Players.LocalPlayer.DisplayName.."(@"..game.Players.LocalPlayer.Name..")",
 	Center = true,
 	AutoShow = true,
 	TabPadding = 5,
@@ -5054,8 +5056,8 @@ L_3_:IgnoreThemeSettings();
 L_3_:SetIgnoreIndexes({
 	"MenuKeybind"
 });
-L_2_:SetFolder("MyScriptHub");
-L_3_:SetFolder("MyScriptHub/specific-game");
+L_2_:SetFolder("DoorsFunni");
+L_3_:SetFolder("DoorsFunni/doors-stuff");
 L_3_:BuildConfigSection(L_74_["UI Settings"]);
 L_2_:ApplyToTab(L_74_["UI Settings"]);
 L_3_:LoadAutoloadConfig();
