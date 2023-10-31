@@ -5015,7 +5015,7 @@ local L_78_ = game:GetService("RunService").RenderStepped:Connect(function()
 			L_833_ = 1 + 0 ;
 		end
 		if (L_833_ == (680 - (642 + 37))) then
-			L_1_:SetWatermark(("BlackKing X BobHub >Doors< | %s fps | %s ms"):format(math.floor(L_77_), math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())));
+			L_1_:SetWatermark(("Funni Doors | %s FPS | %s Ping"):format(math.floor(L_77_), math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())));
 			break;
 		end
 	end
@@ -5036,7 +5036,7 @@ L_79_:AddLabel("Menu bind"):AddKeyPicker("MenuKeybind", {
 });
 L_1_.KeybindFrame.Visible = false;
 _G.ShowKb = false;
-L_79_:AddToggle("MyToggle", {
+L_79_:AddToggle("ShowKeybindToggle", {
 	Text = "Show Keybind",
 	Default = false,
 	Tooltip = "If you enable Show Keybind it then if u disable it.",
