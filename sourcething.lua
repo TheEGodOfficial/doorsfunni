@@ -491,7 +491,7 @@ local L_23_ = L_1_:CreateWindow({
 local L_24_ = {
 	Main = L_23_:AddTab("Main")
 };
-local L_25_ = L_24_.Main:AddLeftGroupbox("[>LocalPlayer<]");
+local L_25_ = L_24_.Main:AddLeftGroupbox("LocalPlayer");
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
 		if _G.speedkuys then
@@ -522,8 +522,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_25_:AddSlider("MySliderspeed", {
-	Text = ">Speed Boots< ",
+L_25_:AddSlider("SpeedSlider", {
+	Text = ">Speed Boost< ",
 	Default = 6.5,
 	Min = 0 - 0,
 	Max = 6.5,
@@ -533,7 +533,7 @@ L_25_:AddSlider("MySliderspeed", {
 		_G.SelectBoots = L_129_arg1;
 	end
 });
-L_25_:AddSlider("MySlider", {
+L_25_:AddSlider("FOVSlider", {
 	Text = ">Field of View< ",
 	Default = 120,
 	Min = 1226 - (1074 + 82),
@@ -546,8 +546,8 @@ L_25_:AddSlider("MySlider", {
 });
 _G.SelectBoots = 1790.5 - (214 + 1570) ;
 _G.FieldOfViewe = 120;
-L_25_:AddToggle("MyToggle", {
-	Text = "Enable Speed Boots",
+L_25_:AddToggle("SpeedToggle", {
+	Text = "Enable Speed Boost",
 	Default = false,
 	Tooltip = "Speed Boots",
 	Callback = function(L_131_arg1)
@@ -559,7 +559,7 @@ L_25_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_25_:AddToggle("MyToggle", {
+L_25_:AddToggle("FOVToggle", {
 	Text = "Enable Field of View",
 	Default = false,
 	Tooltip = "Field of View Hack",
@@ -644,7 +644,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_25_:AddToggle("MyToggle", {
+L_25_:AddToggle("AccelerationToggle", {
 	Text = "No Acceleration",
 	Default = false,
 	Tooltip = "No Slow Down",
@@ -670,7 +670,7 @@ L_25_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_25_:AddToggle("MyToggle", {
+L_25_:AddToggle("NoclipToggle", {
 	Text = "Noclip",
 	Default = false,
 	Tooltip = "Noclip No Bypass",
@@ -713,7 +713,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("BrightToggle", {
 	Text = "FullBright",
 	Default = false,
 	Tooltip = "FullBright",
@@ -753,7 +753,7 @@ game:GetService("Workspace").CurrentRooms.DescendantAdded:Connect(function(L_147
 		end
 	end
 end);
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("InstantToggle", {
 	Text = "Instant Interact",
 	Default = false,
 	Tooltip = "Fast E",
@@ -775,7 +775,7 @@ L_27_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("MaxInteractToggle", {
 	Text = "Max Interact",
 	Default = false,
 	Tooltip = "Press E Far",
@@ -798,7 +798,7 @@ game:GetService("Workspace").CurrentRooms.DescendantAdded:Connect(function(L_157
 		end
 	end
 end);
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("InteractObjectToggle", {
 	Text = "Interact Through Objects",
 	Default = false,
 	Tooltip = "Interact Noclip",
@@ -825,7 +825,7 @@ L_27_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("HeartbeatToggle", {
 	Text = "Auto Heartbeat MiniGame",
 	Default = false,
 	Tooltip = "Win Heartbeat MiniGame",
@@ -833,7 +833,7 @@ L_27_:AddToggle("MyToggle", {
 		getgenv().winhb = L_164_arg1;
 	end
 });
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("ClaimGoldToggle", {
 	Text = "Auto Claim Gold",
 	Default = false,
 	Tooltip = "Auto Loot",
@@ -980,7 +980,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("A000Toggle", {
 	Text = "A-000 No lock",
 	Default = false,
 	Tooltip = "A-000 No lock",
@@ -995,7 +995,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_27_:AddToggle("MyToggle", {
+L_27_:AddToggle("BreakerToggle", {
 	Text = "Auto Complete Breaker Minigame",
 	Default = false,
 	Tooltip = "Breaker Box Minigame So Ez",
@@ -1003,7 +1003,7 @@ L_27_:AddToggle("MyToggle", {
 		_G.AutoBreaker = L_193_arg1;
 	end
 });
-local L_28_ = L_26_:AddTab("[>Main 2<]");
+local L_28_ = L_26_:AddTab("Main 2");
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
 		if _G.IncreasedDoors then
@@ -1011,7 +1011,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("IncreaseDoorToggle", {
 	Text = "Increased Door Opening",
 	Default = false,
 	Tooltip = "Door Opening Far",
@@ -1024,7 +1024,7 @@ game.Players.LocalPlayer.Character.Humanoid:GetPropertyChangedSignal("MoveDirect
 		game:GetService("ReplicatedStorage").EntityInfo.CamLock:FireServer();
 	end
 end);
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("ExitFixToggle", {
 	Text = "Closet Exit Fix",
 	Default = false,
 	Tooltip = "Closet Exit Fast",
@@ -1111,7 +1111,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("SkipRoomsToggle", {
 	Text = "Auto Skip Rooms [BETA]",
 	Default = false,
 	Tooltip = "Use Fly In Inf yield",
@@ -1130,7 +1130,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("OpenDoorKeyToggle", {
 	Text = "Open Doors With Everything",
 	Default = false,
 	Tooltip = "Need Key",
@@ -1138,7 +1138,7 @@ L_28_:AddToggle("MyToggle", {
 		_G.OpenDoorsijnsdg = L_212_arg1;
 	end
 });
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("JackSpamToggle", {
 	Text = "Spam Jack [Slow]",
 	Default = false,
 	Tooltip = "So Slow",
@@ -1161,7 +1161,7 @@ L_28_:AddToggle("MyToggle", {
 	end
 });
 _G.godkuy = false;
-L_28_:AddToggle("MyToggle", {
+L_28_:AddToggle("GodMobileToggle", {
 	Text = "God Mode Gui [Mobile]",
 	Default = false,
 	Tooltip = "For Mobile",
@@ -1327,7 +1327,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("SeekArmsToggle", {
 	Text = "Remove Seek Arms HitBox",
 	Default = false,
 	Tooltip = "Remove Seek Arms HitBox From Seek Chase",
@@ -1335,7 +1335,7 @@ L_30_:AddToggle("MyToggle", {
 		_G.SeekESe = L_237_arg1;
 	end
 });
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("FireToggle", {
 	Text = "Remove Fire Damage",
 	Default = false,
 	Tooltip = "Remove Fire Damage From Seek Chase",
@@ -1343,7 +1343,7 @@ L_30_:AddToggle("MyToggle", {
 		_G.SeekES = L_238_arg1;
 	end
 });
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("SkeletonDoorToggle", {
 	Text = "Remove Skeleton Door",
 	Default = false,
 	Tooltip = "Remove Skeleton Door",
@@ -1389,7 +1389,7 @@ L_30_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("GateDoorToggle", {
 	Text = "Remove Gate Doors",
 	Default = false,
 	Tooltip = "Remove Gate Doors",
@@ -1468,7 +1468,7 @@ L_30_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("PuzzleDoorToggle", {
 	Text = "Remove Puzzle Doors",
 	Default = false,
 	Tooltip = "Remove Puzzle Doors",
@@ -1550,7 +1550,7 @@ L_30_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("SeekChaseToggle", {
 	Text = "Remove Seek Chase",
 	Default = false,
 	Tooltip = "Bypass Seek Chase",
@@ -1596,7 +1596,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_30_:AddToggle("MyToggle", {
+L_30_:AddToggle("NoLightToggle", {
 	Text = "Remove Light [Anti Lag]",
 	Default = false,
 	Tooltip = "Anti Lag Light",
@@ -1604,9 +1604,9 @@ L_30_:AddToggle("MyToggle", {
 		_G.lasf = L_284_arg1;
 	end
 });
-local L_31_ = L_29_:AddTab("[>Item Aura<]");
+local L_31_ = L_29_:AddTab("Item Aura");
 if fireproximityprompt then
-	L_31_:AddToggle("MyToggle", {
+	L_31_:AddToggle("ItemAndKeysToggle", {
 		Text = "Item And Keys",
 		Default = false,
 		Tooltip = "Auto Pick Item And Keys",
@@ -1979,7 +1979,7 @@ else
 	L_1_:Notify("You need to get fireproximityprompt.");
 end
 if fireproximityprompt then
-	L_31_:AddToggle("MyToggle", {
+	L_31_:AddToggle("LeverToggle", {
 		Text = "Lever",
 		Default = false,
 		Tooltip = "Lever Aura",
@@ -2118,7 +2118,7 @@ else
 	L_1_:Notify("You need to get fireproximityprompt.");
 end
 if fireproximityprompt then
-	L_31_:AddToggle("MyToggle", {
+	L_31_:AddToggle("BookGrabToggle", {
 		Text = "Book",
 		Default = false,
 		Tooltip = "Auto Pick Book",
@@ -2253,7 +2253,7 @@ else
 	L_1_:Notify("You need to get fireproximityprompt.");
 end
 if fireproximityprompt then
-	L_31_:AddToggle("MyToggle", {
+	L_31_:AddToggle("BreakerGrabToggle", {
 		Text = "Breaker",
 		Default = false,
 		Tooltip = "Auto Pick Breaker",
@@ -2382,8 +2382,8 @@ if fireproximityprompt then
 else
 	L_1_:Notify("You need to get fireproximityprompt.");
 end
-local L_32_ = L_24_.Main:AddLeftGroupbox("[>Bypass<]");
-L_32_:AddToggle("MyToggle", {
+local L_32_ = L_24_.Main:AddLeftGroupbox("Bypass");
+L_32_:AddToggle("NoHaltToggle", {
 	Text = "Bypass Halt",
 	Default = false,
 	Tooltip = "Anti Halt",
@@ -2418,7 +2418,7 @@ L_32_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoVoidGlitchToggle", {
 	Text = "Bypass Glitch & Void [No JumpScares]",
 	Default = false,
 	Tooltip = "Anti Glitch & Void No JumpScares",
@@ -2465,7 +2465,7 @@ L_32_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoScreechToggle", {
 	Text = "Bypass Screech Damage",
 	Default = false,
 	Tooltip = "Screech No Damage",
@@ -2473,7 +2473,7 @@ L_32_:AddToggle("MyToggle", {
 		getgenv().avoidsc = L_465_arg1;
 	end
 });
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoDupeToggle", {
 	Text = "Bypass Dupe",
 	Default = false,
 	Tooltip = "Anti Dupe",
@@ -2497,7 +2497,7 @@ L_32_:AddToggle("MyToggle", {
 	end
 });
 local L_33_ = game.ReplicatedStorage:WaitForChild("EntityInfo"):WaitForChild("A90");
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoA90Toggle", {
 	Text = "Bypass A-90 [The Rooms]",
 	Default = false,
 	Tooltip = "Bypass A-90 Use In The Rooms",
@@ -2536,7 +2536,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoSnareToggle", {
 	Text = "Bypass Snare",
 	Default = false,
 	Tooltip = "Anti Snare",
@@ -2553,7 +2553,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_32_:AddToggle("MyToggle", {
+L_32_:AddToggle("NoEyesToggle", {
 	Text = "Bypass Eyes Damage",
 	Default = false,
 	Tooltip = "Eyes No Damage",
@@ -2576,8 +2576,8 @@ L_34_.__namecall = newcclosure(function(L_477_arg1, ...)
 	return L_35_(L_477_arg1, table.unpack(args));
 end);
 local L_36_ = L_24_.Main:AddLeftTabbox();
-local L_37_ = L_36_:AddTab("[>Esp<]");
-L_37_:AddToggle("MyToggle", {
+local L_37_ = L_36_:AddTab("Esp");
+L_37_:AddToggle("DoorsEspToggle", {
 	Text = "Doors",
 	Default = false,
 	Tooltip = "Esp Doors",
@@ -2685,7 +2685,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("KeyLeverEspToggle", {
 	Text = "Keys And Levers",
 	Default = false,
 	Tooltip = "Esp Keys And Levers",
@@ -2828,7 +2828,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("ItemEspToggle", {
 	Text = "Items",
 	Default = false,
 	Tooltip = "Esp Items",
@@ -2925,7 +2925,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("BookBreakerEspToggle", {
 	Text = "Books And Breakers",
 	Default = false,
 	Tooltip = "Esp Books And Breakers",
@@ -3059,7 +3059,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("EntityEspToggle", {
 	Text = "Entitys",
 	Default = false,
 	Tooltip = "Esp Entitys",
@@ -3296,7 +3296,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("ChestEspToggle", {
 	Text = "Chest",
 	Default = false,
 	Tooltip = "Esp Chest",
@@ -3401,7 +3401,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("GoldEspToggle", {
 	Text = "Gold",
 	Default = false,
 	Tooltip = "Esp Gold",
@@ -3550,7 +3550,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_37_:AddToggle("MyToggle", {
+L_37_:AddToggle("PlayerEspToggle", {
 	Text = "Players",
 	Default = false,
 	Tooltip = "Esp Players",
@@ -3640,7 +3640,7 @@ L_37_:AddToggle("MyToggle", {
 		end
 	end
 });
-local L_38_ = L_36_:AddTab("[>Color<]");
+local L_38_ = L_36_:AddTab("Color");
 _G.DoorsC = Color3.fromRGB(165, 0 + 0, 255);
 _G.KeyandLevers = Color3.fromRGB(0 - 0, 193 + 39, 255);
 _G.itemC = Color3.fromRGB(0, 232, 255);
@@ -3713,10 +3713,10 @@ L_38_:AddLabel("Players"):AddColorPicker("ColorPicker", {
 		_G.playasc = L_698_arg1;
 	end
 });
-local L_39_ = L_36_:AddTab("[>Setting<]");
+local L_39_ = L_36_:AddTab("Settings");
 _G.EspEnable = true;
 _G.Highlights = true;
-L_39_:AddToggle("MyToggle", {
+L_39_:AddToggle("TextEspToggle", {
 	Text = "Text",
 	Default = true,
 	Tooltip = "Text Esp",
@@ -3724,7 +3724,7 @@ L_39_:AddToggle("MyToggle", {
 		_G.EspEnable = L_699_arg1;
 	end
 });
-L_39_:AddToggle("MyToggle", {
+L_39_:AddToggle("HighlightEspToggle", {
 	Text = "Highlights",
 	Default = true,
 	Tooltip = "Highlights Esp",
@@ -3778,11 +3778,11 @@ workspace.CurrentRooms.DescendantAdded:Connect(function(L_701_arg1)
 		end
 	end
 end);
-local L_40_ = L_24_.Main:AddRightGroupbox("[>Notification<]");
+local L_40_ = L_24_.Main:AddRightGroupbox("Notifications");
 _G.chat = false;
 L_40_:AddLabel("Chat Notify Need to Enable Event");
 _G.kuychatez = "!";
-L_40_:AddInput("MyTextbox", {
+L_40_:AddInput("EventTextInput", {
 	Default = "!",
 	Numeric = false,
 	Finished = false,
@@ -3793,7 +3793,7 @@ L_40_:AddInput("MyTextbox", {
 		_G.kuychatez = L_707_arg1;
 	end
 });
-L_40_:AddToggle("MyToggle", {
+L_40_:AddToggle("EventsToggle", {
 	Text = "Event",
 	Default = false,
 	Tooltip = "Enable Event Notify",
@@ -3969,7 +3969,7 @@ L_40_:AddToggle("MyToggle", {
 		end
 	end
 });
-L_40_:AddToggle("MyToggle", {
+L_40_:AddToggle("ItemEventToggle", {
 	Text = "Item Event",
 	Default = false,
 	Tooltip = "Enable Item Event Notify",
@@ -3977,7 +3977,7 @@ L_40_:AddToggle("MyToggle", {
 		ItemNotifyboi = L_723_arg1;
 	end
 });
-L_40_:AddToggle("MyToggle", {
+L_40_:AddToggle("ChatNotifyToggle", {
 	Text = "Chat Notify",
 	Default = false,
 	Tooltip = "Chat Notify",
@@ -3986,7 +3986,7 @@ L_40_:AddToggle("MyToggle", {
 	end
 });
 if (game:GetService("ReplicatedStorage").GameData.Floor.Value == "Hotel") then
-	L_40_:AddToggle("MyToggle", {
+	L_40_:AddToggle("AutoLibraryCodeToggle", {
 		Text = "Auto Library Code",
 		Default = false,
 		Tooltip = "Auto library code",
@@ -4074,7 +4074,7 @@ if (game:GetService("ReplicatedStorage").GameData.Floor.Value == "Hotel") then
 		end
 	});
 elseif (game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools") then
-	L_40_:AddToggle("MyToggle", {
+	L_40_:AddToggle("AutoLibraryCodeAprilToggle", {
 		Text = "Auto library code [Super Hard Mode]",
 		Default = false,
 		Tooltip = "Auto library code",
@@ -4157,11 +4157,11 @@ elseif (game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools") th
 	});
 end
 local L_41_ = {
-	Other = L_23_:AddTab("Other")
+	Other = L_23_:AddTab("Others")
 };
-local L_42_ = L_41_.Other:AddLeftGroupbox("[>Item Mod<]");
+local L_42_ = L_41_.Other:AddLeftGroupbox("Item Mods");
 L_42_:AddLabel("Crucifix");
-L_42_:AddSlider("MySlider", {
+L_42_:AddSlider("CrucifixUsesSlider", {
 	Text = "Use : ",
 	Default = 1,
 	Min = 480 - (341 + 138),
@@ -4173,7 +4173,7 @@ L_42_:AddSlider("MySlider", {
 	end
 });
 local L_43_ = 1 - 0 ;
-L_42_:AddSlider("MySlider", {
+L_42_:AddSlider("CrucifixRangeSlider", {
 	Text = "Range : ",
 	Default = 376 - (89 + 237),
 	Min = 0 - 0,
@@ -4185,7 +4185,7 @@ L_42_:AddSlider("MySlider", {
 	end
 });
 local L_44_ = 1270 - (855 + 365) ;
-L_42_:AddToggle("MyToggle", {
+L_42_:AddToggle("CrucifixAnythingToggle", {
 	Text = "On anything",
 	Default = false,
 	Tooltip = "On anything?",
@@ -4193,7 +4193,7 @@ L_42_:AddToggle("MyToggle", {
 		Cruanything = L_762_arg1;
 	end
 });
-L_42_:AddToggle("MyToggle", {
+L_42_:AddToggle("CrucifixFailToggle", {
 	Text = "Fail",
 	Default = false,
 	Tooltip = "Fail?",
@@ -4220,8 +4220,8 @@ local L_45_ = L_42_:AddButton({
 	DoubleClick = false,
 	Tooltip = "Get Crucifix Now!"
 });
-local L_46_ = L_41_.Other:AddLeftGroupbox("[>Item Shop<]");
-L_46_:AddDropdown("MyMultiDropdown", {
+local L_46_ = L_41_.Other:AddLeftGroupbox("Item Shop");
+L_46_:AddDropdown("ItemShopMultipleDropDown", {
 	Values = {
 		"Lockpick",
 		"Vitamins",
@@ -4236,7 +4236,7 @@ L_46_:AddDropdown("MyMultiDropdown", {
 		itemguwbv = L_765_arg1;
 	end
 });
-L_46_:AddSlider("MySlider", {
+L_46_:AddSlider("NumberItemsSlider", {
 	Text = "Number of items need",
 	Default = 0,
 	Min = 0 + 0,
@@ -4266,7 +4266,7 @@ L_46_:AddButton({
 	Tooltip = "Buy Item"
 });
 L_46_:AddLabel("Spam Jack");
-L_46_:AddInput("MyTextbox", {
+L_46_:AddInput("JackSpamAmountInput", {
 	Default = "0",
 	Numeric = true,
 	Finished = false,
@@ -4340,8 +4340,8 @@ L_46_:AddButton({
 	DoubleClick = false,
 	Tooltip = "Start To Spam Jack"
 });
-local L_47_ = L_41_.Other:AddRightGroupbox("[>Super Hard Mode + Troll<]");
-L_47_:AddDropdown("MyPlayerDropdown", {
+local L_47_ = L_41_.Other:AddRightGroupbox("Super Hard Mode & Troll");
+L_47_:AddDropdown("PlayersDropDown", {
 	SpecialType = "Player",
 	Text = "Players",
 	Tooltip = "Select Player",
@@ -4372,7 +4372,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
+L_47_:AddToggle("SpamBringBananaToggle", {
 	Text = "Spam Bring Banana!",
 	Default = false,
 	Tooltip = "Spam Bring Banana To Player!",
@@ -4392,7 +4392,7 @@ game:GetService("Workspace").DescendantAdded:Connect(function(L_779_arg1)
 		end
 	end
 end);
-L_47_:AddToggle("MyToggle", {
+L_47_:AddToggle("AntiBananaToggle", {
 	Text = "Anti Banana!",
 	Default = false,
 	Tooltip = "Anti BananaPeel!",
@@ -4461,7 +4461,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
+L_47_:AddToggle("AntiJeffToggle", {
 	Text = "Anti Jeff!",
 	Default = false,
 	Tooltip = "Anti Jeff!",
@@ -4470,7 +4470,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_49_ = L_47_:AddButton({
-	Text = "Use his flashlight",
+	Text = "Use players flashlight",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("Flashlight") then
 			game.Players[SelectPlayer].Backpack.Flashlight.Remote:FireServer();
@@ -4479,7 +4479,7 @@ local L_49_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his flashlight"
+	Tooltip = "Use players flashlight"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4492,8 +4492,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his flashlight",
+L_47_:AddToggle("SpamFlashlightToggle", {
+	Text = "Spam Use players flashlight",
 	Default = false,
 	Tooltip = "Spam Use flashlight",
 	Callback = function(L_801_arg1)
@@ -4501,7 +4501,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_50_ = L_47_:AddButton({
-	Text = "Use his Lighter",
+	Text = "Use players Lighter",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("Lighter") then
 			game.Players[SelectPlayer].Backpack.Lighter.Remote:FireServer();
@@ -4510,7 +4510,7 @@ local L_50_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his Lighter"
+	Tooltip = "Use players Lighter"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4523,8 +4523,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his Lighter",
+L_47_:AddToggle("SpamLighterToggle", {
+	Text = "Spam Use players Lighter",
 	Default = false,
 	Tooltip = "Spam Use Lighter",
 	Callback = function(L_802_arg1)
@@ -4532,7 +4532,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_51_ = L_47_:AddButton({
-	Text = "Use his Vitamins",
+	Text = "Use players Vitamins",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("Vitamins") then
 			game.Players[SelectPlayer].Backpack.Vitamins.Remote:FireServer();
@@ -4541,7 +4541,7 @@ local L_51_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his Vitamins"
+	Tooltip = "Use players Vitamins"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4554,8 +4554,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his Vitamins",
+L_47_:AddToggle("SpamVitaminsToggle", {
+	Text = "Spam Use players Vitamins",
 	Default = false,
 	Tooltip = "Spam Use Vitamins",
 	Callback = function(L_803_arg1)
@@ -4563,7 +4563,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_52_ = L_47_:AddButton({
-	Text = "Use his ShieldMini",
+	Text = "Use players ShieldMini",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("ShieldMini") then
 			game.Players[SelectPlayer].Backpack.ShieldMini.Remote:FireServer();
@@ -4572,7 +4572,7 @@ local L_52_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his ShieldMini"
+	Tooltip = "Use players ShieldMini"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4585,8 +4585,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his ShieldMini",
+L_47_:AddToggle("SpamShieldMiniToggle", {
+	Text = "Spam Use players ShieldMini",
 	Default = false,
 	Tooltip = "Spam Use ShieldMini",
 	Callback = function(L_804_arg1)
@@ -4594,7 +4594,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_53_ = L_47_:AddButton({
-	Text = "Use his ShieldBig",
+	Text = "Use players ShieldBig",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("ShieldBig") then
 			game.Players[SelectPlayer].Backpack.ShieldBig.Remote:FireServer();
@@ -4603,7 +4603,7 @@ local L_53_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his ShieldBig"
+	Tooltip = "Use players ShieldBig"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4616,8 +4616,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his ShieldBig",
+L_47_:AddToggle("SpamShieldBigToggle", {
+	Text = "Spam Use players ShieldBig",
 	Default = false,
 	Tooltip = "Spam Use ShieldBig",
 	Callback = function(L_805_arg1)
@@ -4625,7 +4625,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_54_ = L_47_:AddButton({
-	Text = "Use his HolyGrenade",
+	Text = "Use players HolyGrenade",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("HolyGrenade") then
 			game.Players[SelectPlayer].Backpack.HolyGrenade.Remote:FireServer();
@@ -4634,7 +4634,7 @@ local L_54_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his HolyGrenade"
+	Tooltip = "Use players HolyGrenade"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4647,8 +4647,8 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his HolyGrenade",
+L_47_:AddToggle("SpamHolyGrenadeToggle", {
+	Text = "Spam Use players HolyGrenade",
 	Default = false,
 	Tooltip = "Spam Use HolyGrenade",
 	Callback = function(L_806_arg1)
@@ -4656,7 +4656,7 @@ L_47_:AddToggle("MyToggle", {
 	end
 });
 local L_55_ = L_47_:AddButton({
-	Text = "Use his Shakelight",
+	Text = "Use players Shakelight",
 	Func = function()
 		if game.Players[SelectPlayer].Backpack:FindFirstChild("Shakelight") then
 			game.Players[SelectPlayer].Backpack.Shakelight.Remote:FireServer();
@@ -4665,7 +4665,7 @@ local L_55_ = L_47_:AddButton({
 		end
 	end,
 	DoubleClick = false,
-	Tooltip = "Use his Shakelight"
+	Tooltip = "Use players Shakelight"
 });
 game:GetService("RunService").RenderStepped:Connect(function()
 	pcall(function()
@@ -4678,15 +4678,15 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-L_47_:AddToggle("MyToggle", {
-	Text = "Spam Use his Shakelight",
+L_47_:AddToggle("SpamShakeLightToggle", {
+	Text = "Spam Use players Shakelight",
 	Default = false,
 	Tooltip = "Spam Use Shakelight",
 	Callback = function(L_807_arg1)
 		_G.Shakelighte = L_807_arg1;
 	end
 });
-local L_56_ = L_41_.Other:AddLeftGroupbox("[>Misc<]");
+local L_56_ = L_41_.Other:AddLeftGroupbox("Misc");
 local L_57_ = L_56_:AddButton({
 	Text = "Teleport To Lobby",
 	Func = function()
@@ -4792,8 +4792,8 @@ local L_60_ = L_56_:AddButton({
 local L_61_ = {
 	Premium = L_23_:AddTab("Free Premium")
 };
-local L_62_ = L_61_.Premium:AddLeftGroupbox("[>Troll<]");
-L_62_:AddToggle("MyToggle", {
+local L_62_ = L_61_.Premium:AddLeftGroupbox("Troll");
+L_62_:AddToggle("RemoveDoorsToggle", {
 	Text = "Remove Doors",
 	Default = false,
 	Tooltip = "Need Open Door",
@@ -4814,8 +4814,8 @@ L_62_:AddToggle("MyToggle", {
 	end
 });
 local L_63_ = L_61_.Premium:AddLeftGroupbox("[>Game Play<]");
-L_63_:AddSlider("MySliderspeed", {
-	Text = ">Speed Boots<",
+L_63_:AddSlider("BypassSpeedSlider", {
+	Text = "Speed Boost Bypass",
 	Default = 123 - 73,
 	Min = 448 - (279 + 154),
 	Max = 75,
@@ -4826,15 +4826,15 @@ L_63_:AddSlider("MySliderspeed", {
 	end
 });
 _G.SelectBootst = 50;
-L_63_:AddToggle("MyToggle", {
-	Text = "Enable Speed Boots",
+L_63_:AddToggle("EnableTheSpeedBoostToggle", {
+	Text = "Enable Speed Boost",
 	Default = false,
-	Tooltip = "Speed Boots (Use Bypass Speed Anti Cheat)",
+	Tooltip = "Speed Boost (Use Bypass Speed Anti Cheat)",
 	Callback = function(L_817_arg1)
 		_G.speedkuys = L_817_arg1;
 	end
 });
-L_63_:AddToggle("MyToggle", {
+L_63_:AddToggle("BypassSpeedAntiCheatToggle", {
 	Text = "Bypass Speed Anti Cheat",
 	Default = false,
 	Tooltip = "Bypass Speed Anti Cheat",
@@ -4896,7 +4896,7 @@ local L_64_ = L_63_:AddButton({
 	DoubleClick = false,
 	Tooltip = "Click it Before Seek Chase [Do Not use Remove Seek Chase]"
 });
-local L_65_ = L_61_.Premium:AddLeftGroupbox("[>Super Hard Mode<]");
+local L_65_ = L_61_.Premium:AddLeftGroupbox("Super Hard Mode");
 local L_66_ = L_65_:AddButton({
 	Text = "Bring Banana to Jeff!",
 	Func = function()
@@ -4909,7 +4909,7 @@ local L_66_ = L_65_:AddButton({
 	DoubleClick = false,
 	Tooltip = "Bring Banana To Jeff The Killer!"
 });
-L_65_:AddToggle("MyToggle", {
+L_65_:AddToggle("SpamBringBananaToJeffToggle", {
 	Text = "Spam Bring Banana to Jeff!",
 	Default = false,
 	Tooltip = "Spam Bring Banana To Jeff The Killer!",
@@ -4929,7 +4929,7 @@ L_65_:AddToggle("MyToggle", {
 		end
 	end
 });
-local L_67_ = L_61_.Premium:AddRightGroupbox("[>Mod<]");
+local L_67_ = L_61_.Premium:AddRightGroupbox("Mod");
 local L_68_ = L_67_:AddButton({
 	Text = "Spawn Void",
 	Func = function()
@@ -5030,7 +5030,7 @@ L_79_:AddButton("Unload", function()
 	L_1_:Unload();
 end);
 L_79_:AddLabel("Menu bind"):AddKeyPicker("MenuKeybind", {
-	Default = "End",
+	Default = "P",
 	NoUI = true,
 	Text = "Menu keybind"
 });
@@ -5061,10 +5061,10 @@ L_3_:SetFolder("DoorsFunni/doors-stuff");
 L_3_:BuildConfigSection(L_74_["UI Settings"]);
 L_2_:ApplyToTab(L_74_["UI Settings"]);
 L_3_:LoadAutoloadConfig();
-L_1_:Notify("[Notifier] Press End To Close And Open 3!");
+L_1_:Notify("[Notifier] Press P To Close And Open 3!");
 wait(0.2 + 0 );
-L_1_:Notify("[Notifier] Press End To Close And Open 2!");
+L_1_:Notify("[Notifier] Press P To Close And Open 2!");
 wait(0.2 - 0 );
-L_1_:Notify("[Notifier] Press End To Close And Open 1!");
+L_1_:Notify("[Notifier] Press P To Close And Open 1!");
 wait(0.2);
-L_1_:Notify("[Notifier] Press End To Close And Open");
+L_1_:Notify("[Notifier] Press P To Close And Open");
