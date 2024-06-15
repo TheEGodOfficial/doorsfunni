@@ -1206,7 +1206,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end);
 end);
-pcall(function()
 Options.KeyPicker:OnClick(function()
 	if (_G.godkuy == true) then
 		local L_221_ = 0;
@@ -1300,7 +1299,6 @@ Options.KeyPicker:OnClick(function()
 		end
 	end
 end);
-end)
 local L_29_ = L_24_.Main:AddRightTabbox();
 local L_30_ = L_29_:AddTab("[>Remove<]");
 game:GetService("RunService").RenderStepped:Connect(function()
